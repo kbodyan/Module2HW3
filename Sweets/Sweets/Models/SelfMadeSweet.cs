@@ -6,12 +6,14 @@ using System.Threading.Tasks;
 
 namespace Sweets.Models
 {
-    public class SinglePackedSweet : FactorySweet, ICloneable
+    public class SelfMadeSweet : HandMadeSweet, ICloneable
     {
+        public string Receipt { get; set; }
         public object Clone()
         {
             var temp = MemberwiseClone();
-            ((SinglePackedSweet)temp).Name = (string)Name.Clone();
+            ((SelfMadeSweet)temp).Name = (string)Name.Clone();
+            ((SelfMadeSweet)temp).Receipt = (string)Receipt.Clone();
             return temp;
         }
 

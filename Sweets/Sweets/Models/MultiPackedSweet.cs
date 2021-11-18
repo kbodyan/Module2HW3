@@ -6,9 +6,21 @@ using System.Threading.Tasks;
 
 namespace Sweets.Models
 {
-    internal class MultiPackedSweet
+    internal class MultiPackedSweet : FactorySweet, ICloneable
     {
-        private int _quantityInPackage;
-        private double _priceOfEach;
+        public int QuantityInPackage { get; set; }
+        public double PriceOfEach { get; set; }
+
+        public object Clone()
+        {
+            var temp = MemberwiseClone();
+            ((MultiPackedSweet)temp).Name = (string)Name.Clone();
+            return temp;
+        }
+
+        public override Sweet PutToPresent()
+        {
+            return Clone() as Sweet;
+        }
     }
 }

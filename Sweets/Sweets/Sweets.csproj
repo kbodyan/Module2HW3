@@ -7,7 +7,6 @@
 	  <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
 	  <WarningsAsErrors />
 	  <NoWarn>SA1516</NoWarn>
-	  <NoWarn>SA1401</NoWarn>
   </PropertyGroup>
 
   <ItemGroup>

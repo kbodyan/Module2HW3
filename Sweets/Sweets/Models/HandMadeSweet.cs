@@ -8,6 +8,6 @@ namespace Sweets.Models
 {
     public abstract class HandMadeSweet : Sweet
     {
-
+        public int ShelfLife { get; set; }
     }
 }

@@ -7,10 +7,17 @@ using Sweets.Helper;
 
 namespace Sweets.Models
 {
-    public abstract class Sweet
+    public abstract class Sweet : IComparable
     {
-        protected double _weight;
-        protected TypeOfPackage _package;
-        protected Color _packageColor;
+        public string Name { get; set; }
+        public double Weight { get; set; }
+        public int Calories { get; set; }
+        public TypeOfPackage Package { get; set; }
+        public int CompareTo(object obj)
+        {
+            return Name.CompareTo(((Sweet)obj).Name);
+        }
+
+        public abstract Sweet PutToPresent();
     }
 }

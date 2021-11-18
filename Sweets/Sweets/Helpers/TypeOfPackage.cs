@@ -11,6 +11,7 @@ namespace Sweets.Helper
         Skin,
         Paper,
         Plactic,
+        Box,
         None
     }
 }

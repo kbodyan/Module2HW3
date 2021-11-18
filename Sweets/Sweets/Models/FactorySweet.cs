@@ -8,7 +8,6 @@ namespace Sweets.Models
 {
     public abstract class FactorySweet : Sweet
     {
-        protected double _price;
-        protected int _calories;
+        public double Price { get; set; }
     }
 }
